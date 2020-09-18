@@ -1,0 +1,20 @@
+
+{
+  "name": "MBG",
+  "version": "1.0",
+  "description": "ERASE THEM",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["mbg.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.slack.com/*"],
+      "js": ["ingress.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
